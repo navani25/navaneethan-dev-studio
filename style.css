@@ -679,14 +679,14 @@ body {
 }
 /* --- My Work/Portfolio Section --- */
 .work-section {
-    background-color: #0a0a0a; /* Optional: adds a slightly different background */
+    background-color: #0a0a0a;
 }
 
 .work-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    max-width: 950px; /* Increased max-width for better spacing */
+    max-width: 950px;
     margin: 0 auto;
 }
 
@@ -696,8 +696,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     display: flex;
-    /* Mobile-first: stacked layout */
-    flex-direction: column;
+    flex-direction: column; /* Default for mobile */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -707,13 +706,13 @@ body {
 }
 
 .work-image-container {
-    flex-shrink: 0; /* Prevents the image container from shrinking */
+    flex-shrink: 0;
 }
 
 .work-card img {
     width: 100%;
     height: auto;
-    display: block; /* Removes any extra space below the image */
+    display: block;
 }
 
 .work-content {
@@ -739,7 +738,7 @@ body {
 }
 
 .client-rating {
-    color: #ffc107; /* Gold color for stars */
+    color: #ffc107;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -761,18 +760,23 @@ body {
 /* --- Responsive layout for desktop screens --- */
 @media (min-width: 768px) {
     .work-card {
-        /* Side-by-side layout on larger screens */
         flex-direction: row;
-        align-items: center; /* Vertically center image and text */
+        align-items: center;
     }
 
     .work-image-container {
-        /* Sets the image container to be exactly 45% of the card width */
-        flex-basis: 45%;
+        /* UPDATED: Reduced image container width */
+        flex-basis: 40%;
     }
     
+    .work-image-container img {
+        /* Ensures the image covers the container without distortion */
+        height: 100%;
+        object-fit: cover;
+    }
+
     .work-content {
-        /* The text content takes up the remaining space */
-        flex-basis: 55%;
+        /* UPDATED: Increased text content width */
+        flex-basis: 60%;
     }
 }
