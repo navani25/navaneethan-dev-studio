@@ -686,7 +686,8 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    max-width: 950px;
+    /* Adjusting width for a better single-column presentation */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -695,8 +696,9 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
+    /* This ensures the image is always on top of the text */
     display: flex;
-    flex-direction: column; /* Default for mobile */
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -706,20 +708,19 @@ body {
 }
 
 .work-image-container {
-    flex-shrink: 0;
+    width: 100%;
 }
 
 .work-card img {
+    /* The key change: The image now takes 100% width and its height adjusts automatically */
     width: 100%;
     height: auto;
-    display: block;
+    display: block; /* Removes any extra spacing */
 }
 
 .work-content {
+    /* The text content is now always below the image */
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .work-title {
@@ -757,26 +758,5 @@ body {
     color: var(--light-text-color);
 }
 
-/* --- Responsive layout for desktop screens --- */
-@media (min-width: 768px) {
-    .work-card {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .work-image-container {
-        /* UPDATED: Reduced image container width */
-        flex-basis: 40%;
-    }
-    
-    .work-image-container img {
-        /* Ensures the image covers the container without distortion */
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .work-content {
-        /* UPDATED: Increased text content width */
-        flex-basis: 60%;
-    }
-}
+/* NOTE: The media query for a side-by-side layout has been removed. 
+   The layout is now the same on all screen sizes. */
