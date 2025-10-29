@@ -679,14 +679,14 @@ body {
 }
 /* --- My Work/Portfolio Section --- */
 .work-section {
-    background-color: #0a0a0a;
+    background-color: #0a0a0a; /* Optional: adds a slightly different background */
 }
 
 .work-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 900px;
+    gap: 3rem;
+    max-width: 950px; /* Increased max-width for better spacing */
     margin: 0 auto;
 }
 
@@ -696,33 +696,41 @@ body {
     border-radius: 10px;
     overflow: hidden;
     display: flex;
+    /* Mobile-first: stacked layout */
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
+}
+
+.work-image-container {
+    flex-shrink: 0; /* Prevents the image container from shrinking */
 }
 
 .work-card img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block; /* Removes any extra space below the image */
 }
 
 .work-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .work-title {
     color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
 }
 
 .work-description {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .client-feedback {
@@ -739,8 +747,8 @@ body {
 .client-review {
     font-style: italic;
     color: var(--text-color);
-    margin-bottom: 1rem;
-    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
     border-left: 3px solid var(--primary-color);
 }
 
@@ -750,24 +758,21 @@ body {
     color: var(--light-text-color);
 }
 
-/* --- Responsive adjustments for the work card --- */
+/* --- Responsive layout for desktop screens --- */
 @media (min-width: 768px) {
     .work-card {
+        /* Side-by-side layout on larger screens */
         flex-direction: row;
-        align-items: center;
+        align-items: center; /* Vertically center image and text */
     }
 
     .work-image-container {
-        flex: 0 0 40%;
+        /* Sets the image container to be exactly 45% of the card width */
+        flex-basis: 45%;
     }
-
-    .work-card img {
-        height: 100%;
-        object-fit: cover;
-    }
-
+    
     .work-content {
-        flex: 1;
+        /* The text content takes up the remaining space */
+        flex-basis: 55%;
     }
 }
-
