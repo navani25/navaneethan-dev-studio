@@ -225,22 +225,43 @@ body {
     margin-left: 2rem;
 }
 
+/* --- NEW Animated Navigation Styles --- */
 .desktop-nav .nav-links a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
+    transition: color 0.3s ease;
+    position: relative; /* Required for the underline effect */
     padding-bottom: 5px;
 }
 
+/* The underline element, initially hidden */
+.desktop-nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Starts with zero width */
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* The animation */
+}
+
+/* On hover, the link text gets lighter and the underline grows */
 .desktop-nav .nav-links a:hover {
     color: var(--light-text-color);
 }
+.desktop-nav .nav-links a:hover::after {
+    width: 100%; /* Animate to full width */
+}
 
+/* The active link has a permanent underline and red text */
 .desktop-nav .nav-links a.active {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
+}
+.desktop-nav .nav-links a.active::after {
+    width: 100%; /* Underline is always visible */
 }
 
 .hamburger-menu {
