@@ -741,31 +741,26 @@ body {
     font-size: 0.8rem;
 }
 
-/* --- STYLES FOR NEW PROJECT DETAIL PAGE (Corrected for Dark Mode) --- */
+/* --- STYLES FOR NEW PROJECT DETAIL PAGE (Full Screen Update) --- */
 .project-page-container {
-    background-color: var(--background-color); /* ADDED: Sets the dark background */
+    background-color: var(--background-color);
     color: var(--text-color);
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem;
-    min-height: 100vh; /* ADDED: Ensures background covers the full page */
+    /* REMOVED max-width to allow the container to fill the screen */
+    padding: 2rem 5%; /* Using percentage for better responsive padding */
+    min-height: 100vh;
+}
+
+/* We now apply the max-width to the inner content to keep it readable on very wide screens */
+.project-header,
+.project-content {
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;    /* This keeps the content centered */
 }
 
 .project-header {
     text-align: center;
     padding: 3rem 0;
     border-bottom: 1px solid var(--border-color);
-}
-
-.project-header h1 {
-    font-size: 3rem;
-    color: var(--light-text-color);
-    margin-bottom: 0.5rem;
-}
-
-.project-header .subtitle {
-    font-size: 1.2rem;
-    color: var(--primary-color);
 }
 
 .back-button {
