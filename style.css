@@ -960,3 +960,36 @@ html {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+/* --- NEW: Scroll-Triggered Animations --- */
+
+/* Base state for all animated elements (initially hidden) */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Specific starting positions */
+.slide-from-left {
+    transform: translateX(-50px); /* Start 50px to the left */
+}
+
+.slide-from-bottom {
+    transform: translateY(50px); /* Start 50px from the bottom */
+}
+
+/* The state when the element becomes visible */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0); /* Reset transform to original position */
+}
+
+/* Staggered delay for the contact form fields */
+#contact-form .animate-on-scroll:nth-child(2) {
+    transition-delay: 0.1s;
+}
+#contact-form .animate-on-scroll:nth-child(3) {
+    transition-delay: 0.2s;
+}
+#contact-form .animate-on-scroll:nth-child(4) {
+    transition-delay: 0.3s;
+}
