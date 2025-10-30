@@ -678,6 +678,13 @@ body {
     }
 }
 /* --- UPDATED My Work Section on Main Page --- */
+/* --- Styling for Client Rating on Main Page Work Card --- */
+.work-content .client-rating {
+    color: #ffc107; /* Gold color for stars */
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
 .work-grid {
     display: grid;
     grid-template-columns: 1fr;
