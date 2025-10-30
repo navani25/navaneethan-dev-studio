@@ -1,483 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- =================== SEO META TAGS (UPDATED) =================== -->
 
     <!-- Title Tag (Crucial for SEO) - Appears in the browser tab and Google search results -->
     <title>Navaneethan Dev Studio | Custom Web & App Development</title>
 
     <!-- Meta Description (Crucial for SEO) - The text snippet shown under your title in Google search results -->
-    <meta
-      name="description"
-      content="Welcome to Navaneethan Dev Studio. We build high-performance, visually stunning custom websites, mobile apps, and desktop applications to help your business grow. Get a free consultation today."
-    />
+    <meta name="description"
+        content="Welcome to Navaneethan Dev Studio. We build high-performance, visually stunning custom websites, mobile apps, and desktop applications to help your business grow. Get a free consultation today.">
 
     <!-- Meta Keywords (Good for context) -->
-    <meta
-      name="keywords"
-      content="Navaneethan Dev Studio, web development, mobile app development, full stack developer, custom software, portfolio, India, Java, JavaScript, Angular, React, Node.js"
-    />
+    <meta name="keywords"
+        content="Navaneethan Dev Studio, web development, mobile app development, full stack developer, custom software, portfolio, India, Java, JavaScript, Angular, React, Node.js">
+
 
     <!-- Canonical URL - Tells Google the official version of this page -->
-    <meta
-      name="google-site-verification"
-      content="5HI2dC7Pp9zj2O8rO40Jg8Jkfv-YWEIB_NFCUZDCsqY"
-    />
+    <meta name="google-site-verification" content="5HI2dC7Pp9zj2O8rO40Jg8Jkfv-YWEIB_NFCUZDCsqY" />
     <!-- IMPORTANT: Replace the href below with your actual LIVE website URL -->
-    <link
-      rel="canonical"
-      href="https://navani25.github.io/navaneethan-dev-studio/"
-    />
+    <link rel="canonical" href="https://navani25.github.io/navaneethan-dev-studio/">
 
     <!-- =================== END OF SEO META TAGS =================== -->
 
-    <link rel="icon" type="image/png" href="favicon.png?v=2" />
-    <link rel="shortcut icon" href="favicon.png?v=2" />
-    <link rel="apple-touch-icon" href="favicon.png?v=2" />
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="shortcut icon" href="favicon.png?v=2">
+    <link rel="apple-touch-icon" href="favicon.png?v=2">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
+<body>
+
     <canvas id="background-animation"></canvas>
 
     <div class="content-wrapper">
-      <!-- Header & Navbar -->
-      <header class="navbar">
-        <div class="container nav-container">
-          <a href="#" class="logo">
-            <span>N</span><span>a</span><span>v</span><span>a</span
-            ><span>n</span><span>e</span><span>e</span><span>t</span
-            ><span>h</span><span>a</span><span>n</span>
+<!-- Header & Navbar -->
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <span>N</span><span>a</span><span>v</span><span>a</span><span>n</span><span>e</span><span>e</span><span>t</span><span>h</span><span>a</span><span>n</span>
             <span class="space">&nbsp;</span>
             <span>D</span><span>e</span><span>v</span>
             <span class="space">&nbsp;</span>
-            <span>S</span><span>t</span><span>u</span><span>d</span
-            ><span>i</span><span>o</span>
+            <span>S</span><span>t</span><span>u</span><span>d</span><span>i</span><span>o</span>
             <span class="logo-cursor">|</span>
-          </a>
-          <nav class="desktop-nav">
+        </a>
+        <nav class="desktop-nav">
             <ul class="nav-links">
-              <li><a href="#hero" class="active">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#work">My Work</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#certifications">Certificates</a></li>
-              <li><a href="#about">Our Approach</a></li>
-              <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#certifications">Certificates</a></li>
+                <li><a href="#about">Our Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </nav>
+        </nav>
+
 <!-- NEW: Theme Switcher -->
 <div class="theme-switcher">
-    <button class="theme-btn" data-theme="glassmorphism-dark" aria-label="Switch to Glassmorphism Dark Theme"></button>
-    <button class="theme-btn" data-theme="glassmorphism-light" aria-label="Switch to Glassmorphism Light Theme"></button>
+    <button class="theme-btn" data-theme="matte-dark" aria-label="Switch to Matte Dark Theme"></button>
+    <button class="theme-btn" data-theme="gradient-vibrant" aria-label="Switch to Gradient Vibrant Theme"></button>
 </div>
-          <!-- NEW: Hamburger Menu for Mobile -->
-          <div class="hamburger-menu" id="hamburger-menu">
+
+        <!-- NEW: Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-          </div>
         </div>
-      </header>
+    </div>
+</header>
 
-      <!-- NEW: Mobile Navigation Overlay -->
-      <div class="mobile-nav" id="mobile-nav">
-        <a href="#hero" class="mobile-nav-link">Home</a>
-        <a href="#services" class="mobile-nav-link">Services</a>
-        <a href="#work" class="mobile-nav-link">My Work</a>
-        <a href="#pricing" class="mobile-nav-link">Pricing</a>
-        <a href="#certifications" class="mobile-nav-link">Certificates</a>
-        <a href="#about" class="mobile-nav-link">Our Approach</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
-      </div>
-
-      <!-- Hero Section -->
-      <section id="hero" class="hero-section">
-        <div class="container hero-container">
-          <div class="hero-image-container">
-            <img
-              src="profile-photo.jpg"
-              alt="Navaneethan"
-              class="hero-profile-img"
-            />
-          </div>
-          <div class="hero-content">
-            <h1>Elevate Your Digital Presence</h1>
-            <h2>We Build <span id="typing-animation"></span></h2>
-            <p>
-              We build high-performance, visually stunning solutions for web,
-              mobile, and desktop that drive growth and engage users. We bring
-              your ideas to life, on any platform.
-            </p>
-            <div class="hero-social-links">
-              <a href="https://github.com/navani25" aria-label="GitHub"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/navanithan-r-415806285"
-                aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/navaneethan_dev_studio?utm_source=qr&igsh=MWoweWJ1dm1wYWZmNQ=="
-                aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://wa.me/918525938734"
-                target="_blank"
-                aria-label="WhatsApp"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-            </div>
-            <a href="#services" class="btn">View Our Services</a>
-          </div>
+        <!-- NEW: Mobile Navigation Overlay -->
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="#hero" class="mobile-nav-link">Home</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#work" class="mobile-nav-link">My Work</a>
+            <a href="#pricing" class="mobile-nav-link">Pricing</a>
+            <a href="#certifications" class="mobile-nav-link">Certificates</a>
+            <a href="#about" class="mobile-nav-link">Our Approach</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
         </div>
-      </section>
 
-      <!-- Services Section -->
-      <section id="services" class="services-section content-section">
-        <div class="container">
-          <h2 class="section-title">Our Services</h2>
-          <div class="service-cards">
-            <div class="card">
-              <i class="fas fa-code"></i>
-              <h3>Web Applications</h3>
-              <p>
-                Developing custom, high-performance web apps and SaaS platforms.
-              </p>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-image-container">
+                    <img src="profile-photo.jpg" alt="Navaneethan" class="hero-profile-img">
+                </div>
+                <div class="hero-content">
+                    <h1>Elevate Your Digital Presence</h1>
+                    <h2>We Build <span id="typing-animation"></span></h2>
+                    <p>
+                        We build high-performance, visually stunning solutions for web, mobile, and desktop that drive
+                        growth and engage users. We bring your ideas to life, on any platform.
+                    </p>
+                    <div class="hero-social-links">
+                        <a href="https://github.com/navani25" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/navanithan-r-415806285" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/navaneethan_dev_studio?utm_source=qr&igsh=MWoweWJ1dm1wYWZmNQ=="
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/918525938734" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <a href="#services" class="btn">View Our Services</a>
+                </div>
             </div>
-            <div class="card">
-              <i class="fas fa-mobile-alt"></i>
-              <h3>Mobile Apps (iOS & Android)</h3>
-              <p>
-                Building intuitive and powerful native apps for both iOS and
-                Android platforms.
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-laptop-code"></i>
-              <h3>Desktop Apps (Windows & macOS)</h3>
-              <p>
-                Creating reliable and feature-rich desktop applications for
-                Windows and macOS.
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-shopping-cart"></i>
-              <h3>E-commerce Solutions</h3>
-              <p>
-                Creating secure and user-friendly online stores to drive your
-                sales.
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-image"></i>
-              <h3>Portfolio & Modern Websites</h3>
-              <p>
-                Elegant portfolios and responsive websites to showcase your
-                brand.
-              </p>
-            </div>
-            <div class="card">
-              <i class="fas fa-sync-alt"></i>
-              <h3>Redesign & Optimization</h3>
-              <p>
-                Revitalizing existing sites and apps with a modern look and
-                improved performance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- My Work Section -->
-      <section id="work" class="work-section content-section">
-        <div class="container">
-          <h2 class="section-title">My Recent Work</h2>
-          <div class="work-grid">
+        <!-- Services Section -->
+        <section id="services" class="services-section content-section">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="service-cards">
+                    <div class="card"><i class="fas fa-code"></i>
+                        <h3>Web Applications</h3>
+                        <p>Developing custom, high-performance web apps and SaaS platforms.</p>
+                    </div>
+                    <div class="card"><i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Apps (iOS & Android)</h3>
+                        <p>Building intuitive and powerful native apps for both iOS and Android platforms.</p>
+                    </div>
+                    <div class="card"><i class="fas fa-laptop-code"></i>
+                        <h3>Desktop Apps (Windows & macOS)</h3>
+                        <p>Creating reliable and feature-rich desktop applications for Windows and macOS.</p>
+                    </div>
+                    <div class="card"><i class="fas fa-shopping-cart"></i>
+                        <h3>E-commerce Solutions</h3>
+                        <p>Creating secure and user-friendly online stores to drive your sales.</p>
+                    </div>
+                    <div class="card"><i class="fas fa-image"></i>
+                        <h3>Portfolio & Modern Websites</h3>
+                        <p>Elegant portfolios and responsive websites to showcase your brand.</p>
+                    </div>
+                    <div class="card"><i class="fas fa-sync-alt"></i>
+                        <h3>Redesign & Optimization</h3>
+                        <p>Revitalizing existing sites and apps with a modern look and improved performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ <!-- My Work Section -->
+<section id="work" class="work-section content-section">
+    <div class="container">
+        <h2 class="section-title">My Recent Work</h2>
+        <div class="work-grid">
             <div class="work-card">
-              <div class="work-image-container">
-                <!-- Use the main home page screenshot here -->
-                <img
-                  src="My Work/ajay-home.png"
-                  alt="Portfolio website for Ajay"
-                />
-              </div>
-              <div class="work-content">
-                <h3 class="work-title">Client Portfolio: Ajay Palanisamy</h3>
-                <p class="work-description">
-                  A modern, responsive portfolio for a Data Scientist & Analyst,
-                  featuring smooth animations and a clean UI.
-                </p>
-
-                <!-- NEW: Client Star Rating -->
-                <div class="client-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <div class="work-image-container">
+                    <!-- Use the main home page screenshot here -->
+                    <img src="My Work/ajay-home.png" alt="Portfolio website for Ajay">
                 </div>
+                <div class="work-content">
+                    <h3 class="work-title">Client Portfolio: Ajay Palanisamy</h3>
+                    <p class="work-description">A modern, responsive portfolio for a Data Scientist & Analyst, featuring smooth animations and a clean UI.</p>
+                    
+                    <!-- NEW: Client Star Rating -->
+                    <div class="client-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
 
-                <div class="work-tags">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JavaScript</span>
+                    <div class="work-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a href="My Work/project-ajay.html" class="btn">View Project Details</a>
                 </div>
-                <a href="My Work/project-ajay.html" class="btn"
-                  >View Project Details</a
-                >
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
 
-      <!-- Pricing Section -->
-      <section id="pricing" class="pricing-section content-section">
-        <div class="container">
-          <h2 class="section-title">Our Pricing</h2>
-          <div class="pricing-grid">
-            <div class="pricing-card">
-              <i class="fas fa-code"></i>
-              <h3>Web Applications</h3>
-              <div class="price-range">₹2,999 – ₹1,00,000</div>
-              <ul class="pricing-features">
-                <li>Custom small business websites</li>
-                <li>Basic admin dashboard (optional)</li>
-                <li>Responsive & fast loading</li>
-              </ul>
-              <a href="#contact" class="btn">Get a Quote</a>
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section content-section">
+            <div class="container">
+                <h2 class="section-title">Our Pricing</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Web Applications</h3>
+                        <div class="price-range">₹2,999 – ₹1,00,000</div>
+                        <ul class="pricing-features">
+                            <li>Custom small business websites</li>
+                            <li>Basic admin dashboard (optional)</li>
+                            <li>Responsive & fast loading</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get a Quote</a>
+                    </div>
+                    <div class="pricing-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Apps (iOS & Android)</h3>
+                        <div class="price-range">₹4,999 – ₹1,00,000</div>
+                        <ul class="pricing-features">
+                            <li>Basic Android or iOS app</li>
+                            <li>Firebase integration</li>
+                            <li>Play Store upload help</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get a Quote</a>
+                    </div>
+                    <div class="pricing-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Desktop Apps (Windows & macOS)</h3>
+                        <div class="price-range">₹3,999 – ₹1,00,000</div>
+                        <ul class="pricing-features">
+                            <li>Basic Windows/macOS app</li>
+                            <li>Offline or local data support</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get a Quote</a>
+                    </div>
+                    <div class="pricing-card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>E-commerce Solutions</h3>
+                        <div class="price-range">₹3,499 – ₹1,00,000</div>
+                        <ul class="pricing-features">
+                            <li>Product listing, cart & checkout</li>
+                            <li>Basic admin dashboard</li>
+                            <li>Razorpay or Stripe integration</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get a Quote</a>
+                    </div>
+                    <div class="pricing-card">
+                        <i class="fas fa-image"></i>
+                        <h3>Portfolio & Modern Websites</h3>
+                        <div class="price-range">₹1,499 – ₹1,00,000</div>
+                        <ul class="pricing-features">
+                            <li>Personal / business portfolio site</li>
+                            <li>Responsive modern design</li>
+                            <li>Fast & SEO-ready</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get a Quote</a>
+                    </div>
+                </div>
             </div>
-            <div class="pricing-card">
-              <i class="fas fa-mobile-alt"></i>
-              <h3>Mobile Apps (iOS & Android)</h3>
-              <div class="price-range">₹4,999 – ₹1,00,000</div>
-              <ul class="pricing-features">
-                <li>Basic Android or iOS app</li>
-                <li>Firebase integration</li>
-                <li>Play Store upload help</li>
-              </ul>
-              <a href="#contact" class="btn">Get a Quote</a>
-            </div>
-            <div class="pricing-card">
-              <i class="fas fa-laptop-code"></i>
-              <h3>Desktop Apps (Windows & macOS)</h3>
-              <div class="price-range">₹3,999 – ₹1,00,000</div>
-              <ul class="pricing-features">
-                <li>Basic Windows/macOS app</li>
-                <li>Offline or local data support</li>
-              </ul>
-              <a href="#contact" class="btn">Get a Quote</a>
-            </div>
-            <div class="pricing-card">
-              <i class="fas fa-shopping-cart"></i>
-              <h3>E-commerce Solutions</h3>
-              <div class="price-range">₹3,499 – ₹1,00,000</div>
-              <ul class="pricing-features">
-                <li>Product listing, cart & checkout</li>
-                <li>Basic admin dashboard</li>
-                <li>Razorpay or Stripe integration</li>
-              </ul>
-              <a href="#contact" class="btn">Get a Quote</a>
-            </div>
-            <div class="pricing-card">
-              <i class="fas fa-image"></i>
-              <h3>Portfolio & Modern Websites</h3>
-              <div class="price-range">₹1,499 – ₹1,00,000</div>
-              <ul class="pricing-features">
-                <li>Personal / business portfolio site</li>
-                <li>Responsive modern design</li>
-                <li>Fast & SEO-ready</li>
-              </ul>
-              <a href="#contact" class="btn">Get a Quote</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Certifications Section -->
-      <section
-        id="certifications"
-        class="certifications-section content-section"
-      >
-        <div class="container">
-          <h2 class="section-title">Awards & Certificates</h2>
-          <div class="certificates-grid">
-            <div class="certificate-item">
-              <img
-                src="certificate.jpg"
-                alt="Certified Full Stack Java Developer Certificate"
-              />
-              <p class="certificate-title">
-                Certified Full Stack Java Developer
-              </p>
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section content-section">
+            <div class="container">
+                <h2 class="section-title">Awards & Certificates</h2>
+                <div class="certificates-grid">
+                    <div class="certificate-item">
+                        <img src="certificate.jpg" alt="Certified Full Stack Java Developer Certificate">
+                        <p class="certificate-title">Certified Full Stack Java Developer</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- About Section -->
-      <section id="about" class="about-section content-section">
-        <div class="container">
-          <h2 class="section-title">Our Approach & Tech Stack</h2>
-          <div class="about-content">
-            <div class="about-text">
-              <p>
-                At <strong>Navaneethan Dev Studio</strong>, we believe in a
-                collaborative process. We work closely with you to understand
-                your goals, ensuring the final product is not only beautiful but
-                also solves real-world business challenges. Our focus is on
-                clean code, user-centric design, and measurable results using a
-                modern, flexible tech stack.
-              </p>
+        <!-- About Section -->
+        <section id="about" class="about-section content-section">
+            <div class="container">
+                <h2 class="section-title">Our Approach & Tech Stack</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>At <strong>Navaneethan Dev Studio</strong>, we believe in a collaborative process. We work
+                            closely with you to understand your goals, ensuring the final product is not only beautiful
+                            but also solves real-world business challenges. Our focus is on clean code, user-centric
+                            design, and measurable results using a modern, flexible tech stack.</p>
+                    </div>
+                </div>
+                <div class="tech-stack-container">
+                    <div class="tech-column">
+                        <h4>Frontend Development</h4>
+                        <h5>Languages & Markup</h5>
+                        <ul class="skills-list">
+                            <li>HTML5</li>
+                            <li>CSS3 / SCSS / Sass</li>
+                            <li>JavaScript (ES6+)</li>
+                        </ul>
+                        <h5>Frameworks & Libraries</h5>
+                        <ul class="skills-list">
+                            <li>React.js</li>
+                            <li>Next.js</li>
+                            <li>Angular</li>
+                            <li>Tailwind CSS</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Backend Development</h4>
+                        <h5>Frameworks & Databases</h5>
+                        <ul class="skills-list">
+                            <li>Node.js + Express.js</li>
+                            <li>Python + Django</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Mobile App Development</h4>
+                        <h5>Cross-Platform</h5>
+                        <ul class="skills-list">
+                            <li>Flutter (Dart)</li>
+                            <li>React Native</li>
+                        </ul>
+                        <h5>Native Development</h5>
+                        <ul class="skills-list">
+                            <li>Android (Kotlin/Java)</li>
+                            <li>iOS (Swift/SwiftUI)</li>
+                        </ul>
+                        <h5>Backend & APIs</h5>
+                        <ul class="skills-list">
+                            <li>Firebase / Supabase</li>
+                            <li>REST / GraphQL APIs</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Modern Tools & Practices</h4>
+                        <h5>Design & Optimization</h5>
+                        <ul class="skills-list">
+                            <li>Responsive Design</li>
+                            <li>Mobile-first Design</li>
+                            <li>SEO Optimization</li>
+                            <li>PWA</li>
+                        </ul>
+                        <h5>Collaboration</h5>
+                        <ul class="skills-list">
+                            <li>Git / GitHub</li>
+                            <li>Jira</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="tech-stack-container">
-            <div class="tech-column">
-              <h4>Frontend Development</h4>
-              <h5>Languages & Markup</h5>
-              <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3 / SCSS / Sass</li>
-                <li>JavaScript (ES6+)</li>
-              </ul>
-              <h5>Frameworks & Libraries</h5>
-              <ul class="skills-list">
-                <li>React.js</li>
-                <li>Next.js</li>
-                <li>Angular</li>
-                <li>Tailwind CSS</li>
-                <li>Bootstrap</li>
-              </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section content-section">
+            <div class="container">
+                <h2 class="section-title">Get a Free Consultation</h2>
+                <div class="contact-form-container">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="0f0f0564-fc8e-42b0-97a1-876c620dc61a">
+
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Tell us about your project..." rows="5"
+                            required></textarea>
+
+                        <div id="form-result"></div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
             </div>
-            <div class="tech-column">
-              <h4>Backend Development</h4>
-              <h5>Frameworks & Databases</h5>
-              <ul class="skills-list">
-                <li>Node.js + Express.js</li>
-                <li>Python + Django</li>
-                <li>MySQL</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-              </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <p>© 2025 Navaneethan Dev Studio. All rights reserved.</p>
+                <div class="footer-social-links">
+                    <a href="https://github.com/navani25" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/navanithan-r-415806285" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/navaneethan_dev_studio?utm_source=qr&igsh=MWoweWJ1dm1wYWZmNQ=="
+                        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/918525938734" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="tech-column">
-              <h4>Mobile App Development</h4>
-              <h5>Cross-Platform</h5>
-              <ul class="skills-list">
-                <li>Flutter (Dart)</li>
-                <li>React Native</li>
-              </ul>
-              <h5>Native Development</h5>
-              <ul class="skills-list">
-                <li>Android (Kotlin/Java)</li>
-                <li>iOS (Swift/SwiftUI)</li>
-              </ul>
-              <h5>Backend & APIs</h5>
-              <ul class="skills-list">
-                <li>Firebase / Supabase</li>
-                <li>REST / GraphQL APIs</li>
-              </ul>
-            </div>
-            <div class="tech-column">
-              <h4>Modern Tools & Practices</h4>
-              <h5>Design & Optimization</h5>
-              <ul class="skills-list">
-                <li>Responsive Design</li>
-                <li>Mobile-first Design</li>
-                <li>SEO Optimization</li>
-                <li>PWA</li>
-              </ul>
-              <h5>Collaboration</h5>
-              <ul class="skills-list">
-                <li>Git / GitHub</li>
-                <li>Jira</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+        </footer>
 
-      <!-- Contact Section -->
-      <section id="contact" class="contact-section content-section">
-        <div class="container">
-          <h2 class="section-title">Get a Free Consultation</h2>
-          <div class="contact-form-container">
-            <form
-              id="contact-form"
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="0f0f0564-fc8e-42b0-97a1-876c620dc61a"
-              />
+        <!-- Back to Top Button -->
+        <button class="back-to-top" aria-label="Go to top of page"><i class="fas fa-arrow-up"></i></button>
 
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Tell us about your project..."
-                rows="5"
-                required
-              ></textarea>
-
-              <div id="form-result"></div>
-              <button type="submit" class="btn">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="container footer-container">
-          <p>© 2025 Navaneethan Dev Studio. All rights reserved.</p>
-          <div class="footer-social-links">
-            <a href="https://github.com/navani25" aria-label="GitHub"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/navanithan-r-415806285"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/navaneethan_dev_studio?utm_source=qr&igsh=MWoweWJ1dm1wYWZmNQ=="
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://wa.me/918525938734"
-              target="_blank"
-              aria-label="WhatsApp"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-          </div>
-        </div>
-      </footer>
-
-      <!-- Back to Top Button -->
-      <button class="back-to-top" aria-label="Go to top of page">
-        <i class="fas fa-arrow-up"></i>
-      </button>
     </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>

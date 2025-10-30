@@ -1,21 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log("Navaneethan Dev Studio Script Loaded Successfully!");
+    console.log("Navaneethan Dev Studio Script Loaded Successfully!"); // This is our check
 
     // --- Typing Animation for Hero Section ---
     const typingElement = document.getElementById('typing-animation');
     if (typingElement) {
         const wordsToType = ["Web Applications.", "Mobile Apps.", "Desktop Solutions."];
-        let wordIndex = 0, charIndex = 0, isDeleting = false;
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
         function type() {
             const currentWord = wordsToType[wordIndex];
-            let displayText = isDeleting ? currentWord.substring(0, charIndex--) : currentWord.substring(0, charIndex++);
+            let displayText;
+            if (isDeleting) {
+                displayText = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                displayText = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
             typingElement.textContent = displayText;
             let typeSpeed = isDeleting ? 100 : 200;
-            if (!isDeleting && charIndex > currentWord.length) {
-                typeSpeed = 2000; isDeleting = true;
-            } else if (isDeleting && charIndex < 0) {
-                isDeleting = false; wordIndex = (wordIndex + 1) % wordsToType.length; typeSpeed = 500;
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % wordsToType.length;
+                typeSpeed = 500;
             }
             setTimeout(type, typeSpeed);
         }
@@ -25,8 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Back to Top Button ---
     const backToTopButton = document.querySelector('.back-to-top');
     if (backToTopButton) {
-        window.addEventListener('scroll', () => backToTopButton.classList.toggle('visible', window.scrollY > 300));
-        backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 
     // --- Mobile Navigation ---
@@ -34,25 +55,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNav = document.getElementById('mobile-nav');
     if (hamburger && mobileNav) {
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        const toggleNav = () => {
+        hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             mobileNav.classList.toggle('open');
-        };
-        hamburger.addEventListener('click', toggleNav);
-        mobileNavLinks.forEach(link => link.addEventListener('click', toggleNav));
+        });
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('open');
+            });
+        });
     }
 
     // --- Active Nav Link on Scroll ---
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.desktop-nav .nav-links a');
     if (sections.length > 0 && navLinks.length > 0) {
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
-                if (scrollY >= section.offsetTop - 150) current = section.id;
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
             });
             navLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href').includes(current));
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
             });
         });
     }
@@ -61,8 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- THEME SWITCHER LOGIC ---
     // ===============================================
     const themeButtons = document.querySelectorAll('.theme-btn');
-    // UPDATED: Default theme is now 'glassmorphism-dark'
-    const currentTheme = localStorage.getItem('theme') || 'glassmorphism-dark';
+    const currentTheme = localStorage.getItem('theme') || 'cyber-red';
 
     function applyTheme(theme) {
         document.body.setAttribute('data-theme', theme);
@@ -80,4 +110,5 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(selectedTheme);
         });
     });
+
 });
