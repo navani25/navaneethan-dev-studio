@@ -677,17 +677,12 @@ body {
         gap: 1rem;
     }
 }
-/* --- My Work/Portfolio Section --- */
-.work-section {
-    background-color: #0a0a0a;
-}
-
+/* --- UPDATED My Work Section on Main Page --- */
 .work-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    /* Adjusting width for a better single-column presentation */
-    max-width: 800px;
+    gap: 2rem;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -696,7 +691,6 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
-    /* This ensures the image is always on top of the text */
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -707,56 +701,138 @@ body {
     box-shadow: 0 10px 25px rgba(255, 0, 0, 0.15);
 }
 
-.work-image-container {
-    width: 100%;
-}
-
 .work-card img {
-    /* The key change: The image now takes 100% width and its height adjusts automatically */
     width: 100%;
     height: auto;
-    display: block; /* Removes any extra spacing */
+    display: block;
 }
 
 .work-content {
-    /* The text content is now always below the image */
-    padding: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .work-title {
     color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .work-description {
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.work-tags {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.work-tags .tag {
+    background-color: #2a2a2a;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* --- STYLES FOR NEW PROJECT DETAIL PAGE --- */
+.project-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+.project-header {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-header h1 {
+    font-size: 3rem;
+    color: var(--light-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-header .subtitle {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.back-button {
     margin-bottom: 2rem;
 }
 
-.client-feedback {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
+.project-content {
+    padding: 2rem 0;
 }
 
-.client-rating {
-    color: #ffc107;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+.project-section {
+    margin-bottom: 4rem;
 }
 
-.client-review {
-    font-style: italic;
-    color: var(--text-color);
+.project-section h2 {
+    font-size: 2rem;
+    color: var(--light-text-color);
     margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-    border-left: 3px solid var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
 }
 
-.client-name {
-    text-align: right;
-    font-weight: bold;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    background-color: var(--card-background);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    color: var(--light-text-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 1rem;
+    font-weight: 600;
     color: var(--light-text-color);
 }
-
-/* NOTE: The media query for a side-by-side layout has been removed. 
-   The layout is now the same on all screen sizes. */
