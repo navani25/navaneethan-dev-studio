@@ -741,30 +741,34 @@ body {
     font-size: 0.8rem;
 }
 
-/* --- STYLES FOR NEW PROJECT DETAIL PAGE (Full Screen Update) --- */
+/* --- STYLES FOR NEW PROJECT DETAIL PAGE (Hover Animations Added) --- */
 .project-page-container {
     background-color: var(--background-color);
     color: var(--text-color);
-    /* REMOVED max-width to allow the container to fill the screen */
-    padding: 2rem 5%; /* Using percentage for better responsive padding */
+    padding: 2rem 5%;
     min-height: 100vh;
 }
 
-/* We now apply the max-width to the inner content to keep it readable on very wide screens */
 .project-header,
 .project-content {
-    max-width: 1200px; /* Adjust this value as needed */
-    margin: 0 auto;    /* This keeps the content centered */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-header {
-    text-align: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.project-header h1,
+.project-header .subtitle {
+    text-align: center;
 }
 
 .back-button {
     margin-bottom: 2rem;
+    display: inline-block;
 }
 
 .project-content {
@@ -795,6 +799,15 @@ body {
     border-radius: 10px;
     border: 1px solid var(--border-color);
     text-align: center;
+    /* ADDED: Smooth transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* ADDED: Hover animation for feature cards */
+.feature-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 15px rgba(255, 0, 0, 0.1);
 }
 
 .feature-item i {
@@ -820,6 +833,14 @@ body {
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
+    /* ADDED: Smooth transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ADDED: Hover animation for gallery images */
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-item img {
