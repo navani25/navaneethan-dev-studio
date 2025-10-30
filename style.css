@@ -741,12 +741,14 @@ body {
     font-size: 0.8rem;
 }
 
-/* --- STYLES FOR NEW PROJECT DETAIL PAGE --- */
+/* --- STYLES FOR NEW PROJECT DETAIL PAGE (Corrected for Dark Mode) --- */
 .project-page-container {
+    background-color: var(--background-color); /* ADDED: Sets the dark background */
+    color: var(--text-color);
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
-    color: var(--text-color);
+    min-height: 100vh; /* ADDED: Ensures background covers the full page */
 }
 
 .project-header {
