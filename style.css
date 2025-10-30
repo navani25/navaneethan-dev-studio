@@ -29,6 +29,7 @@ body {
     color: var(--text-color);
 }
 
+
 /* --- Background Animation Canvas --- */
 #background-animation {
     position: fixed;
@@ -926,4 +927,15 @@ body {
 /* Adds a small icon next to the "View Live Site" text */
 .work-buttons .btn i {
     margin-left: 0.5rem;
+}
+/* --- HIDE BROWSER SCROLLBAR (Corrected) --- */
+/* For Chrome, Safari, and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge, and Firefox */
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
