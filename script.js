@@ -61,8 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- THEME SWITCHER LOGIC ---
     // ===============================================
     const themeButtons = document.querySelectorAll('.theme-btn');
-    // UPDATED: Default theme is now 'matte-dark'
-    const currentTheme = localStorage.getItem('theme') || 'matte-dark';
+    // UPDATED: Default theme is now 'glassmorphism-dark'
+    const currentTheme = localStorage.getItem('theme') || 'glassmorphism-dark';
 
     function applyTheme(theme) {
         document.body.setAttribute('data-theme', theme);
