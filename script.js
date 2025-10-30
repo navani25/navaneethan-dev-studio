@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log("Navaneethan Dev Studio Script Loaded Successfully!"); // This is our check
-
     // --- Typing Animation for Hero Section ---
     const typingElement = document.getElementById('typing-animation');
     if (typingElement) {
@@ -87,28 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // ===============================================
-    // --- THEME SWITCHER LOGIC ---
-    // ===============================================
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    const currentTheme = localStorage.getItem('theme') || 'cyber-red';
-
-    function applyTheme(theme) {
-        document.body.setAttribute('data-theme', theme);
-        themeButtons.forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-theme') === theme);
-        });
-    }
-
-    applyTheme(currentTheme);
-
-    themeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const selectedTheme = button.getAttribute('data-theme');
-            localStorage.setItem('theme', selectedTheme);
-            applyTheme(selectedTheme);
-        });
-    });
 
 });

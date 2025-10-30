@@ -11,21 +11,6 @@
     --mono-font: 'Courier New', Courier, monospace;
 }
 
-body[data-theme="synthwave-blue"] {
-    /* --- New Theme: Synthwave Blue --- */
-    --primary-color: #00e5ff;
-    /* Neon Cyan */
-    --background-color: #0d0221;
-    /* Deep Space Blue */
-    --card-background: #241b43;
-    /* Dark Purple */
-    --text-color: #bfa9f1;
-    /* Light Lavender */
-    --light-text-color: #ffffff;
-    --border-color: #3d316b;
-    /* Darker Purple */
-}
-
 /* --- Base Setup --- */
 * {
     margin: 0;
@@ -42,8 +27,6 @@ body {
     line-height: 1.6;
     background-color: transparent;
     color: var(--text-color);
-    transition: background-color 0.4s ease;
-    /* Smooth theme transition */
 }
 
 /* --- Background Animation Canvas --- */
@@ -93,42 +76,6 @@ body {
     align-items: center;
 }
 
-/* --- Theme Switcher --- */
-.theme-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: 1.5rem;
-    /* Space between nav and switcher */
-}
-
-.theme-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid var(--border-color);
-    cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.theme-btn:hover {
-    transform: scale(1.1);
-}
-
-.theme-btn.active {
-    border-color: var(--primary-color);
-}
-
-/* Theme-specific button colors */
-.theme-btn[data-theme="cyber-red"] {
-    background-color: #ff0000;
-}
-
-.theme-btn[data-theme="synthwave-blue"] {
-    background-color: #00e5ff;
-}
-
-/* Existing CSS from here... (Ensure all color codes are replaced with variables) */
 /* --- Logo, Nav, Hero, Services, etc. --- */
 .logo {
     font-size: 1.5rem;
@@ -876,16 +823,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.project-header .project-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
 .project-header h1,
 .project-header .subtitle {
     text-align: center;
+}
+
+.project-header .back-button {
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 
 .project-content {
